@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: #00ff00;
+}
+
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.3) contrast(1.1); /* تعتيم ذكي ليبرز التصميم والنصوص في المنتصف */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* حاوية الصورة للتأكد من توسطها تماماً وبدون أي إضاءة خلفية */
+.avatar-container {
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: none; /* إلغاء أي إضاءة خلفية تماماً */
+    border: none;
+}
+
+.glitch {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+    color: #00ff00;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* الشاشة البرمجية بتصميم هيبة ومطور */
+.terminal {
+    background: rgba(5, 15, 5, 0.85);
+    border: 1px solid #00ff00;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.15);
+    overflow: hidden;
+}
+
+/* شريط التحكم العلوي المضاف للشاشة */
+.terminal-header {
+    background: rgba(0, 30, 0, 0.9);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #00ff00;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+    display: inline-block;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.title {
+    color: #00ff00;
+    font-size: 0.85rem;
+    margin-left: 15px;
+    opacity: 0.8;
+}
+
+.terminal-body {
+    padding: 25px;
+    text-align: left;
+}
+
+.console-line {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    display: none; /* تظهر بترتيب عبر الـ JS */
+    color: #00ff00;
+}
+
+/* صندوق المعلومات الحقيقية */
+.info-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(0, 255, 0, 0.5);
+    display: none;
+}
+
+.info-row {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.label { 
+    color: #88aa88; 
+    font-weight: bold;
+}
+
+.target-data { 
+    color: #00ff00; 
+    font-weight: bold; 
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+}
+
+.danger { 
+    color: #ff3333; 
+    text-shadow: 0 0 8px rgba(255, 51, 51, 0.6); 
+    font-weight: bold; 
+}
