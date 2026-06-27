@@ -18,10 +18,16 @@ function getOS() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+    // إجبار فيديو الخلفية على التشغيل تلقائياً فوراً
+    const bgVideo = document.getElementById('bg-video');
+    if (bgVideo) {
+        bgVideo.play().catch(e => console.log("تنبيه: المتصفح يطلب تفاعل لتشغيل الفيديو تلقائياً", e));
+    }
+
+    // باقي الكود الخاص بك كما هو بالأسفل...
     const lines = document.querySelectorAll('.console-line');
     const typingSound = document.getElementById('typing-sound');
-    let delay = 100;
-
+    // ... تكملة الكود القديم
     // تشغيل الصوت مع أول حركة للمستخدم في الصفحة لتخطي حظر المتصفحات
     const startAudio = () => {
         if (!hasAudioStarted) {
